@@ -35,6 +35,7 @@ div.nav-link {
   background-color: gray;
 }
 
+
 img.slide {
   width: 400px;
   height: 310px;
@@ -45,5 +46,5 @@ img.slide {
 }
 
 #deselected {
-  color: white;
+  background-color: white;
 }
