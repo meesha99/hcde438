@@ -1,0 +1,30 @@
+<html>
+  <body>
+    <canvas id="myCanvas" width="600" height="600" style="border:2px solid red;" ></canvas>
+    </script>
+    
+  </body>
+  <script> 
+    var canvas=document.getElementById("myCanvas");  var context=canvas.getContext("2d");context.moveTo(200,20); 
+    context.lineTo(200,580);  context.lineWidth=5;  context.stroke();
+    
+     var context=canvas.getContext("2d");context.moveTo(400,20);  context.lineTo(400,580);  context.lineWidth=5;  context.stroke();
+
+      var context=canvas.getContext("2d");context.moveTo(20,400);  context.lineTo(580,400);  context.lineWidth=5;  context.stroke();
+    
+      var context=canvas.getContext("2d");context.moveTo(20,200);  context.lineTo(580,200);  context.lineWidth=5;  context.stroke();
+    
+      var x=100, y=100, radius=80, angle=2.0*Math.PI;
+      context.beginPath();
+      context.arc(x, y, radius, 0, angle);  context.lineWidth=5;           context.stroke();
+    
+    var x=500, y=500, radius=80, angle=2.0*Math.PI;
+      context.beginPath();
+      context.arc(x, y, radius, 0, angle);  context.lineWidth=5;           context.stroke();
+    
+         var context=canvas.getContext("2d");context.moveTo(210,210);  context.lineTo(390,390);  context.lineWidth=5;  context.stroke();
+    
+   var context=canvas.getContext("2d");context.moveTo(210,390);  context.lineTo(390,210);  context.lineWidth=5;  context.stroke();
+  </script>
+  
+  </html>

@@ -1,0 +1,16 @@
+<html>
+<head>
+    <titile>Warbirds Ordered List</title>
+</head>
+<body>
+    <h2>Safeway Shopping List</h2>
+    <ul>
+        <li>Milk</li>
+        <li>Cheddar Cheese</li>
+        <li>Sour Cream</li>
+        <li>Potatoes</li>
+        <li>Onions</li>
+    </ul>
+    </body>
+    </html>
+    

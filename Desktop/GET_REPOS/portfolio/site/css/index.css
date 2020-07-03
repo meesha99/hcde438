@@ -1,0 +1,52 @@
+body {
+  border: 100px solid rgb(255, 182, 193, 0.6);
+  padding: 20px;
+  margin: 30px auto;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.display-4 {
+  font-size: 24px;
+}
+img.profile {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+div.jumbotron {
+  margin-top: 25px;
+  height: 360px;
+  width: 450;
+  font-size: 12px;
+  padding: 20px;
+  background-color: black;
+}
+div.carousel-item {
+  width: 400;
+  height: 310px;
+  padding: 20px;
+}
+
+
+div.background {
+  background-color: solid rgb(255, 182, 193, 0.6);
+}
+
+div.nav-link {
+  background-color: gray;
+}
+
+
+img.slide {
+  width: 400px;
+  height: 310px;
+}
+
+#selected {
+  background-color: rgb(241, 221, 207);
+}
+
+#deselected {
+  color: white;
+}
