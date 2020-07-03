@@ -16,7 +16,8 @@ img.profile {
 
 div.jumbotron {
   margin-top: 25px;
-  height: 350px;
+  height: 360px;
+  width: 450;
   font-size: 12px;
   padding: 20px;
   background-color: black;
@@ -26,6 +27,7 @@ div.carousel-item {
   height: 310px;
   padding: 20px;
 }
+
 
 div.background {
   background-color: solid rgb(255, 182, 193, 0.6);
@@ -46,5 +48,5 @@ img.slide {
 }
 
 #deselected {
-  background-color: white;
+  color: white;
 }
