@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 
 function Footer(props){
-  console.log(props)
   const [text,setText] = useState('')
   
   return <footer className="footer" 
