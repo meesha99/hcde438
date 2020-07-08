@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Spotify-API-Specification</title>
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/index.js"></script>t>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">OAuth Token:</span>
+        </div>
+        <input id="auth-token" type="text" class="form-control" placeholder="e.g. BQCHenQp6pORwbHI8BUDeTeqH08LEEjJoOSUz7dnlvqfmzJEtRtIJ3B5BnFwvoF83wikQ2QVYG1wGJ6aOvtas6H-lrHjZuf_B4OzjgeWaXiSEcP3eyarb84mdMaFX79jnGm4aPHIflL8exR3n4Btl60ZpSsDYb-umg">
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">Spotify API Explorer</h5>
+        <p class="card-text">Register for a FREE Spotify Developer Account, Visit the Spotify Developer <a href="https://developer.spotify.com/console/get-search-item">Console</a>, Search for an artist in the US market by typing their name in the <em><b>Artist Name</b></em>          input field:</p>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Artist Name:</span>
+          </div>
+          <input id="artist-name" type="text" class="form-control" placeholder="e.g. Timberlake">
+        </div>
+        <a id="send-req" class="btn btn-primary">Send API Request</a>
+
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Search URL:</span>
+          </div>
+          <input id="search-url" type="text" class="form-control" placeholder="e.g. https://api.spotify.com/v1/artists/{id}/albums?...">
+        </div>
+
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Artist ID:</span>
+          </div>
+          <input id="artist-id" type="text" class="form-control" placeholder="e.g. 5olDKSsFhhmwh8UCWwKtpq">
+        </div>
+
+        <div class="input-group">
+          <textarea id="spotify-data" class="form-control" placeholder="Artist Information JSON"></textarea>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <h6>Name: <span id="out-name"></span></h6>
+          </div>
+          <div class="col">
+            <h6>Followers: <span id="followers"></span></h6>
+          </div>
+          <div class="col">
+            <h6>Genres: <span id="genre"></span></h6>
+          </div>
+
+          <div class="col">
+            <h6>URL: <span id="artist-url"></span></h6>
+          </div>
+        </div>
+
+        <!-- Artist Image Row -->
+        <div class="row">
+          <div class="col"><img src="" alt="Artist"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js'></script>
+<script src="js/index.js"></script>
+
+</html>
