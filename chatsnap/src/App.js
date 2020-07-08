@@ -12,10 +12,10 @@ function App() {
         <span>Chat App</span>
       </header>
     
-<Message />
+      {messages.map((m,i)=> <Message key={i} text={m} />)}
 
-      <Footer hi="hello" 
-        onSend={(text)=> setMessages([text])}
+      <Footer 
+        onSend={(text)=> setMessages([...messages,text])}
         color="purple"
       
         />

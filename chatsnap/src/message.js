@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Message(prop){
+function Message(props){
     return <div className="msg">
-    <div className="text-message">
-    Hey! This is my first message.
+    <div className="msg-bubble">
+        {props.text}
     </div>
 </div>
 }
