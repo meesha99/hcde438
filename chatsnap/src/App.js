@@ -1,30 +1,47 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
-import Footer from './footer';
-import Message from './message';
+import Footer from './footer'
+import Message from './message'
 import {initialize, useDatu} from 'datu'
+import {BrowserRouter, Route} from 'react-router-dom'
+import NamePicker from './namePicker'
 
 function App() {
-  const {messages, send} = useDatu()
-  console.log(messages)
+  useEffect(()=>{
+    const path = window.location.pathname
+    if(path.length<2) window.location.pathname='/home'
+  }, [])
+  return <BrowserRouter>
+    <Route path="/:room" component={Room} />
+  </BrowserRouter>
+}
+
+function Room(props) {
+  const room = props.match.params.room
+  const {messages, send} = useDatu(room)
+  const [name,setName] = useState('')
   return (
     <main className="main">
-      
+  
       <header>
-      <img src="https://cdn.dribbble.com/users/420317/screenshots/6195864/friend.jpg" alt="logo"/>
-        <span>Chat App</span>
+        <div style={{display:'flex',alignItems:'center'}}>
+          <img src="/gorrilla.jpg" alt="logo" />
+          <span>Chat App</span>
+        </div>
+        <NamePicker saveName={setName} />
       </header>
-    
-    <div className="messages">
-      {messages.map((m,i)=> {
-      return <Message key={i} text={m.text} />
-      })}
-    </div>
 
-      <Footer 
-        onSend={text=> send({text:text})}
-        color="purple"
-        />
+      <div className="messages">
+        {messages.map((m,i)=> {
+          return <Message key={i} text={m.text} 
+            name={m.name} isMe={m.name===name}
+          />
+        })}
+      </div>
+
+      <Footer
+        onSend={text=> send({text, room, name})} 
+      />
 
     </main>
   )
@@ -33,12 +50,12 @@ function App() {
 export default App;
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDWXVgUqm3xATyzqUqTxcpvsW7U804ctXI",
-  authDomain: "chatter20202020.firebaseapp.com",
-  databaseURL: "https://chatter20202020.firebaseio.com",
-  projectId: "chatter20202020",
-  storageBucket: "chatter20202020.appspot.com",
-  messagingSenderId: "630230183323",
-  appId: "1:630230183323:web:cc967f51fc79e394ca053e"
+  apiKey: "AIzaSyCM4MfokXnlCxEQcp96BcXk16-6Y5bTsfk",
+  authDomain: "chatsnapppp.firebaseapp.com",
+  databaseURL: "https://chatsnapppp.firebaseio.com",
+  projectId: "chatsnapppp",
+  storageBucket: "chatsnapppp.appspot.com",
+  messagingSenderId: "324225124799",
+  appId: "1:324225124799:web:21a0ca271a8efdf09e390a"
 };
 initialize(firebaseConfig)
