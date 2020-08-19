@@ -45,6 +45,11 @@ function Navbar() {
   return (
     <div className="App--navbar">
       <h1>CozyBrew Coffee Company</h1>
+        <div style={{display:'flex',alignItems:'center'}}>
+        <p class="aligncenter"> 
+          <img src="./images/cozybrew.png" alt="logo" height="100px" width="150px" align="center"/>
+        </p>
+        </div>
     </div>
 
   )
@@ -54,7 +59,6 @@ function Main(){
   return (
     <div className="App-main">
         <img src= './public/images/cozybrew.png' alt=""/>
-
       <h2>Main</h2>
       </div>
   )
